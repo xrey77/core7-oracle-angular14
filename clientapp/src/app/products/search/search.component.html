@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="top-10">Search Product</h2>
+
+    <form class="row g-3" #searchForm="ngForm" (ngSubmit)="submitSearchForm(searchForm)" novalidate autocomplete="off">
+        <div class="col-auto">
+          <input type="text" class="form-control-sm" [(ngModel)]="search" name="search" placeholder="enter Product keyword">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary btn-sm mb-3">search</button>
+        </div>
+    </form>
+    
+    <div class="card-group">
+
+      <div class="card" *ngFor="let product of products">
+        <img src="{{product.prod_pic}}" class="card-img-top product-size" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Descriptions</h5>
+          <p class="card-text">{{product.descriptions}}</p>
+      </div>
+      <div class="card-footer">
+          <p class="card-text text-danger"><span class="text-dark">PRICE :</span>&nbsp;<strong>{{product.sell_price | number : '1.2-2' }}</strong></p>
+      </div>  
+
+      </div>
+  
+  </div>    
+  
+
+</div>

@@ -1,0 +1,10 @@
+.cover {
+    width: 100%!important;
+    height: 50%!important;
+    /* background-image: url("http://localhost:5099/resources/images/locateus.png");
+    background-repeat: no-repeat;
+    background-size: contain;*/
+} 
+img {
+    margin: auto;
+}

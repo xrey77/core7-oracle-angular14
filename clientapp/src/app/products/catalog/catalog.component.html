@@ -1,0 +1,31 @@
+<div class="container-fluid xheight">
+    <h4 class="text-center">Product Catalogs</h4>
+
+    <div class="card-group">
+
+        <div class="card" *ngFor="let product of products">
+          <img src="{{product.prod_pic}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Descriptions</h5>
+            <p class="card-text">{{product.descriptions}}</p>
+        </div>
+        <div class="card-footer">
+            <p class="card-text text-danger"><span class="text-dark">PRICE :</span>&nbsp;<strong>{{product.sell_price | number : '1.2-2' }}</strong></p>
+        </div>  
+
+        </div>
+    
+    </div>    
+    <nav aria-label="Page navigation example">
+        <ul class="pagination mt-4">
+          <li class="page-item"><a (click)="lastPage($event)" class="page-link" href="#">Last</a></li>
+          <li class="page-item"><a (click)="prevPage($event)" class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a (click)="nextPage($event)" class="page-link" href="#">Next</a></li>
+          <li class="page-item"><a (click)="firstPage($event)" class="page-link" href="#">First</a></li>
+          <li class="page-item page-link text-danger">Page&nbsp;{{page}} of&nbsp;{{totpage}}</li>
+
+        </ul>
+      </nav>
+
+</div>
+

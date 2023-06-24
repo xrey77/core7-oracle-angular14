@@ -1,0 +1,9 @@
+.xheight {
+    margin-bottom: 50px!important;
+}
+.price-bottom {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom!important;
+    width: 100%;
+}

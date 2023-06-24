@@ -1,0 +1,27 @@
+<div class="modal fade" id="staticLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticLoginLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h1 class="modal-title fs-5 text-white" id="staticLoginLabel">Users Login</h1>
+          <button id="loginClose" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #loginForm="ngForm" (ngSubmit)="submitLoginForm(loginForm)" novalidate autocomplete="off">
+
+          <div class="mb-3">
+                <input type="text" class="form-control" required #username="ngModel" name="username" placeholder="enter Username" autocomplete="off" ngModel>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" required #pasword="ngModel"  name="pasword"  placeholder="enter Password" autocomplete="off" ngModel>
+              </div>
+              <button type="submit" class="btn btn-primary">login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+            <div class="w-100 text-left text-danger fsize-12">{{loginMessage}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="mfashow" type="button" class="btn btn-primary hide-mfa" data-bs-toggle="modal" data-bs-target="#staticMfa">MFA</button>            
+  <app-mfa></app-mfa>
